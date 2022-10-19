@@ -1,0 +1,101 @@
+*{box-sizing: border-box; 
+  margin: 0; padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    /*CSS display especifica si un elemento es tratado como 
+    block or inline element y el diseño usado por sus hijos, 
+    como flow layout (Diseño de Flujo), grid (Cuadricula) o flex (Flexible)*/
+
+    /*CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible 
+    para alterar sus dimensiones y llenar el espacio disponible.*/
+    display: flex;
+    justify-content: center;
+    align-items: center; /* align-items es para artículos en una sola fila*/
+    background-color: rgb(9, 9, 37);
+    font-family: "calibri";
+}
+
+/*WIDGET*/
+.card{
+    width: 100%; /*flexible dentro de las medidas MIN y MAX*/
+    max-width: 1440px; 
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    border-radius: 8px;
+}
+
+/*SECCION TEXTOS*/
+.izquierda{
+    padding: 5rem 8rem 5rem 5rem; /*MARGEN de TODO el texto --> arriba,derecha, abajo, izquierda */
+    color:white;
+    flex-basis: 50%; /*Todos los items se alinearan en una sola fila*/
+}
+
+.title{
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.title span{
+    color: hsl(277, 64%, 61%);
+}
+
+.descripcion{
+    color: lightgray;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.inferior{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-between;/*separa los 3 char*/
+}
+
+.char{
+    font-size: 1.5rem;
+}
+.char span{
+    display: block; /*le quitamos el nivel INLINE y al ser de BLOQUE forzamos a que ocupe todo encho y el H1 forzara a las pequeñas descripciones a bajar*/
+    font-weight: normal; /*quitamos la negrita que todas las etiquetas de titulo traen por defecto*/
+    font-size: 1rem;
+    margin-top: .5rem;
+    margin-right: 5rem;
+}
+
+/*IMAGEN*/
+.derecha{
+    flex-basis: 50%;
+    background-image: url(..//images/image-header-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0 8px 8px 0;
+}
+
+/*aplicar Filtro imagen*/
+.derecha::before{
+    content: ""; /*La propiedad content permite generar contenido a través de CSS*/
+    /*A este content lo posicionamos Sobre la Imagen*/
+   
+    position: absolute;/*Este es Absolute del position:Relative de la caja derecha*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 85%, 36%, .7);
+    border-radius: 0 8px 8px 0;
+}
+
+/*Estilos Pie para acceder link fronEndMentor */
+.attribution { font-size: 11px; 
+               text-align: center; 
+               display: block;
+            }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -6,22 +6,17 @@ html, body {
 }
 
 body {
-    /*CSS display especifica si un elemento es tratado como 
-    block or inline element y el diseño usado por sus hijos, 
-    como flow layout (Diseño de Flujo), grid (Cuadricula) o flex (Flexible)*/
-
-    /*CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible 
-    para alterar sus dimensiones y llenar el espacio disponible.*/
+   
     display: flex;
     justify-content: center;
-    align-items: center; /* align-items es para artículos en una sola fila*/
+    align-items: center; 
     background-color: rgb(9, 9, 37);
     font-family: "calibri";
 }
 
 /*WIDGET*/
 .card{
-    width: 100%; /*flexible dentro de las medidas MIN y MAX*/
+    width: 100%; 
     max-width: 1440px; 
     background-color: hsl(244, 38%, 16%);
     display: flex;
@@ -30,9 +25,9 @@ body {
 
 /*SECCION TEXTOS*/
 .izquierda{
-    padding: 5rem 8rem 5rem 5rem; /*MARGEN de TODO el texto --> arriba,derecha, abajo, izquierda */
+    padding: 5rem 8rem 5rem 5rem;
     color:white;
-    flex-basis: 50%; /*Todos los items se alinearan en una sola fila*/
+    flex-basis: 50%; 
 }
 
 .title{
@@ -54,15 +49,15 @@ body {
 .inferior{
     display: flex;
     margin-top: 5rem;
-    justify-content: space-between;/*separa los 3 char*/
+    justify-content: space-between;
 }
 
 .char{
     font-size: 1.5rem;
 }
 .char span{
-    display: block; /*le quitamos el nivel INLINE y al ser de BLOQUE forzamos a que ocupe todo encho y el H1 forzara a las pequeñas descripciones a bajar*/
-    font-weight: normal; /*quitamos la negrita que todas las etiquetas de titulo traen por defecto*/
+    display: block; 
+    font-weight: normal; 
     font-size: 1rem;
     margin-top: .5rem;
     margin-right: 5rem;
@@ -81,10 +76,9 @@ body {
 
 /*aplicar Filtro imagen*/
 .derecha::before{
-    content: ""; /*La propiedad content permite generar contenido a través de CSS*/
-    /*A este content lo posicionamos Sobre la Imagen*/
+    content: ""; 
    
-    position: absolute;/*Este es Absolute del position:Relative de la caja derecha*/
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -93,7 +87,7 @@ body {
     border-radius: 0 8px 8px 0;
 }
 
-/*Estilos Pie para acceder link fronEndMentor */
+
 .attribution { font-size: 11px; 
                text-align: center; 
                display: block;
